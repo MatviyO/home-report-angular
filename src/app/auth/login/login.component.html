@@ -1,16 +1,38 @@
 
   <p class="text-xs-center"> Login in to work!</p>
-  <form>
-    <div class="form-group">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div
+      [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}"
+      class="form-group">
       <label for="email">Email</label>
-      <input type="text" id="email" class="form-control underlined" placeholder="Your email">
+      <input type="text" id="email" class="form-control underlined" placeholder="Your email" formControlName="email">
+      <span
+        *ngIf="form.get('email').invalid && form.get('email').touched   " class="form-help-text">
+        <span *ngIf="form.get('email')['errors'] ['required'] ">Email dont null</span>
+        <span *ngIf="form.get('email')['errors'] ['email'] ">Email dont @email</span>
+
+      </span>
+
+    </div>
+    <div class="form-group"
+         [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}">
+      <label for="password">Password</label>
+      <input type="password" id="password" class="form-control underlined" placeholder="Your password" formControlName="password">
+      <span
+        *ngIf="form.get('password').invalid && form.get('password').touched   " class="form-help-text">
+        <span *ngIf="form.get('password')['errors'] ['required'] ">Email dont null</span>
+        <span *ngIf="form.get('password')['errors'] ['minlength'] ">Paasword more.
+          {{form.get('password')['errors'] ['minlength']['requiredLength'] }}
+          actualLengths = {{ form.get('password')['errors'] ['minlength']['actualLength']}}
+        </span>
+
+      </span>
     </div>
     <div class="form-group">
-      <label for="pass">Password</label>
-      <input type="password" id="pass" class="form-control underlined" placeholder="Your password">
-    </div>
-    <div class="form-group">
-      <button class="btn btn-block btn-primary">Login</button>
+      <button
+        type="submit"
+        [disabled]="form.invalid"
+        class="btn btn-block btn-primary">Login</button>
     </div>
     <div class="form-group">
       <p class="text-muted text-xs-center">
