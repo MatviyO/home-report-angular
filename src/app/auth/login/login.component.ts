@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UsersService} from '../../shared/services/users.service';
+import {User} from '../../shared/models/user.model';
 
 @Component({
   selector: 'link-login',
@@ -9,7 +11,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class LoginComponent implements OnInit {
   form: FormGroup;
 
-  constructor() { }
+  constructor(private usersService:  UsersService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -19,7 +21,12 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.form);
+    const formData = this.form.value;
+    this.usersService.getUserByEmail(formData.email)
+      .subscribe((user: User) => {
+        console.log(user)
+      })
+
   }
 
 }
