@@ -4,14 +4,14 @@ import {UsersService} from '../../shared/services/users.service';
 import {User} from '../../shared/models/user.model';
 
 @Component({
-  selector: 'link-login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
 
-  constructor(private usersService:  UsersService) { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
     const formData = this.form.value;
     this.usersService.getUserByEmail(formData.email)
       .subscribe((user: User) => {
-        console.log(user)
-      })
+        console.log(user);
+      });
 
   }
 

@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
 import {AuthModule} from './auth/auth.module';
 import {AppRoutingModule} from './app-routing.module';
 import {UsersService} from './shared/services/users.service';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,7 @@ import {UsersService} from './shared/services/users.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    HttpModule,
     AuthModule,
     AppRoutingModule
   ],
