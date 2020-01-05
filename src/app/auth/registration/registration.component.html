@@ -1,20 +1,33 @@
 <p class="text-xs-center">Registration for a access</p>
-<form>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="email">Email</label>
     <input type="text" id="email" class="form-control underlined" placeholder="Your email">
   </div>
-  <div class="form-group">
-    <label for="pass">Password</label>
-    <input type="password" id="pass" class="form-control underlined" placeholder="Your password">
+  <div class="form-group has-error">
+    <label for="password">Password</label>
+    <input type="password" id="password" class="form-control underlined" placeholder="Your password">
     <span class="form-help-text">Error message.</span>
+  </div>
+  <div class="form-group has-success">
+    <label for="name">Name</label>
+    <input type="text" class="form-control undefined"
+    id="name" placeholder="Write name">
+    <span class="form-help-text">Success message.</span>
+  </div>
+  <div class="form-group">
+    <label for="agree">
+      <input type="checkbox" id="agree" class="checkbox">
+      <span>Agree with the rules</span>
+    </label>
   </div>
   <div class="form-group">
     <button class="btn btn-block btn-primary">Registration</button>
   </div>
   <div class="form-group">
     <p class="text-muted text-xs-center">
-
+      You has account?
+      <a routerLink="'/login'">Login!</a>
     </p>
   </div>
 </form>
