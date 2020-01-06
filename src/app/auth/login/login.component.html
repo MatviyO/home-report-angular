@@ -24,7 +24,7 @@
       <span
         *ngIf="form.get('password').invalid && form.get('password').touched   " class="form-help-text">
         <span *ngIf="form.get('password')['errors'] ['required'] ">Email dont null</span>
-        <span *ngIf="form.get('password')['errors'] ['minlength'] ">Paasword more.
+        <span *ngIf="form.get('password')['errors'] ['minlength'] && form.get('password')['errors'] ['minlength']['requiredLength']">Paasword more.
           {{form.get('password')['errors'] ['minlength']['requiredLength'] }}
           actualLengths = {{ form.get('password')['errors'] ['minlength']['actualLength']}}
         </span>
