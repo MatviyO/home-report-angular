@@ -27,6 +27,7 @@ export class RegistrationComponent implements OnInit {
     console.log(this.form)
    сonsole.log('fdsfjsdhjfsdfhjsdhfhjsdhfhsjksfdjjh ')
     console.log('djufudsufsidfi')
+    console.log(this.message)
   }
 
 }
