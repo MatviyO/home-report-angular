@@ -25,9 +25,12 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit() {
     console.log(this.form)
-   сonsole.log('fdsfjsdhjfsdfhjsdhfhjsdhfhsjksfdjjh ')
+    сonsole.log('fdsfjsdhjfsdfhjsdhfhjsdhfhsjksfdjjh ')
     console.log('djufudsufsidfi')
     console.log(this.message)
+    console.log('dsflkjsdfkksd')
+    console.log('dsflkjsdfkksd')
+    console.log('dsflkjsdfkksd')
   }
 
 }
