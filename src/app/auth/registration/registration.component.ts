@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Message} from '../../shared/models/message';
+import {UsersService} from '../../shared/services/users.service';
+import {User} from '../../shared/models/user.model';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {AuthService} from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-registration',
@@ -10,7 +14,9 @@ import {Message} from '../../shared/models/message';
 export class RegistrationComponent implements OnInit {
   message: Message;
   form: FormGroup
-  constructor() { }
+  constructor(private usersService: UsersService,
+              authService:  AuthService,
+              private router: Router) { }
 
   ngOnInit() {
     this.message = new Message('danger', '');
@@ -22,15 +28,13 @@ export class RegistrationComponent implements OnInit {
 
     })
   }
-
   onSubmit() {
-    console.log(this.form)
-    сonsole.log('fdsfjsdhjfsdfhjsdhfhjsdhfhsjksfdjjh ')
-    console.log('djufudsufsidfi')
-    console.log(this.message)
-    console.log('dsflkjsdfkksd')
-    console.log('dsflkjsdfkksd')
-    console.log('dsflkjsdfkksd')
+    const {email, password, name} = this.form.value;
+    const user = new User(email, password, name)
+    this.usersService.createUser(user)
+      .subscribe(() => {
+         this.router.navigate(['/login'], { queryParams: {nowCanLogin: true}});
+      })
   }
 
 }
