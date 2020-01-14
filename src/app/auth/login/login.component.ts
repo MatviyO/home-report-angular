@@ -51,9 +51,8 @@ export class LoginComponent implements OnInit {
             window.localStorage.setItem('user', JSON.stringify(user));
               this.authService.login();
               // this.router.navigate(['']);
-
           } else { this.showMessage({text: 'Password good', type: 'danger' })}
-        } else {this.showMessage({ text: 'user dont created', type: 'success'})}
+        } else {this.showMessage({ text: 'User dont created', type: 'success'})}
       });
 
   }

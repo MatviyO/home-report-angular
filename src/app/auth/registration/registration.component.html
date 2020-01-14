@@ -10,7 +10,8 @@
     <span
       *ngIf="form.get('email').invalid && form.get('email').touched   " class="form-help-text">
         <span *ngIf="form.get('email')['errors'] ['required'] ">Email dont null</span>
-        <span *ngIf="form.get('email')['errors'] ['email'] ">Email dont @email</span>
+        <span *ngIf="form.get('email')['errors'] ['email'] ">Email not true</span>
+ <span *ngIf="form.get('email')['errors'] ['forbiddenemail'] ">Email occupied </span>
 
       </span>
   </div>
