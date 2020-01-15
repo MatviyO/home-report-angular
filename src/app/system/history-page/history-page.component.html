@@ -20,26 +20,94 @@
     <div class="row">
       <div class="col-md-12">
         <div class="card">
-          <table>
-            <thead>
+          <div class="card-header bordere">
+            <div class="header-block">
+              <h3 class="title">List event</h3>
+            </div>
+            <div class="forn-inline pull-right m-r-2">
+              <div class="form-group">
+                <input type="email" class="forn-control" placeholder="search">
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-secondary dropdown-toggle">Params</button>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-list">Action</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            </thead>
-            <tbody>
-            <tr>
-              <th scope="row">2</th>
-              <td>33.333</td>
-              <td>12.12.2020</td>
-              <td>Otdux</td>
-              <td>
-                <span class="label label-success">DOXOD</span>
-              </td>
-              <td class="text-lg-center">
-                <a href="#" class="btn btn-primary-outline">Otrut</a>
-              </td>
-            </tr>
-            </tbody>
-          </table>
+
         </div>
       </div>
     </div>
   </section>
+
+
+
+
+
+<!--  <table>-->
+<!--    <thead>-->
+
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--      <th scope="row">2</th>-->
+<!--      <td>33.333</td>-->
+<!--      <td>12.12.2020</td>-->
+<!--      <td>Otdux</td>-->
+<!--      <td>-->
+<!--        <span class="label label-success">DOXOD</span>-->
+<!--      </td>-->
+<!--      <td class="text-lg-center">-->
+<!--        <a href="#" class="btn btn-primary-outline">Otrut</a>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table> -->
+
+
+<!-- MODAL-->
+
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" type="button"><span>X</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label class=" control-label" for="period">Change period</label>
+            <select class="form-control" id="period">
+              <option>Type</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label  class="control-label">Change type event</label>
+            <div>
+              <label>
+                <input type="checkbox" class="checkbox">
+                <span>d111111g</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label  class="control-label">Change category</label>
+            <div>
+              <label>
+                <input type="checkbox" class="checkbox">
+                <span>d22222g</span>
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button  type="button" class="btn btn-secondary">Cancel</button>
+            <button  type="button" class="btn btn-secondary">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
