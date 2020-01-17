@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
             console.log('yes')
             window.localStorage.setItem('user', JSON.stringify(user));
               this.authService.login();
-              // this.router.navigate(['']);
+             this.router.navigate(['/system', 'dashboard']);
           } else { this.showMessage({text: 'Password good', type: 'danger' })}
         } else {this.showMessage({ text: 'User dont created', type: 'success'})}
       });

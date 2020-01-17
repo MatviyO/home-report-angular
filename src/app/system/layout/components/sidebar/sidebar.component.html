@@ -1,0 +1,42 @@
+<!-- sidebar -->
+
+  <div class="logo"><a href="#" class="simple-text logo-normal">
+    <img src="../../assets/img/angular2-logo-red.png" alt="logo" class="jss12">
+    Linkin park
+  </a></div>
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li class="nav-item "  [routerLinkActive]="'active'">
+        <a class="nav-link "  [routerLink]="['/system', 'dashboard']" >
+          <i class="material-icons">content_paste</i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+      <li class="nav-item  " [routerLinkActive]="'active'">
+        <a class="nav-link" [routerLink]="['/system', 'account']">
+          <i class="material-icons">content_paste</i>
+          <p>Account</p>
+        </a>
+      </li>
+      <li class="nav-item " [routerLinkActive]="'active'">
+        <a class="nav-link" [routerLink]="['/system', 'history']">
+          <i class="material-icons">content_paste</i>
+          <p>History</p>
+        </a>
+      </li>
+      <li class="nav-item "[routerLinkActive]="'active'">
+        <a class="nav-link" [routerLink]="['/system', 'planing']">
+          <i class="material-icons">library_books</i>
+          <p>Planing</p>
+        </a>
+      </li>
+      <li class="nav-item " [routerLinkActive]="'active'">
+        <a class="nav-link" [routerLink]="['/system', 'records']">
+          <i class="material-icons">location_ons</i>
+          <p>Records</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+<!-- End sidebar -->

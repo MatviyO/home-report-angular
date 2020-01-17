@@ -15146,6 +15146,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar {
+
   position: fixed;
   top: 0;
   bottom: 0;
@@ -15331,8 +15332,8 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   height: 100%;
   content: "";
   display: block;
-  background: #FFFFFF;
-  opacity: .94;
+  background: black;
+  opacity: .44;
 }
 
 .sidebar .logo {
@@ -15417,8 +15418,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar[data-background-color="black"] .sidebar-background:after {
-  background: #000;
-  opacity: .8;
+
 }
 
 .sidebar[data-background-color="black"] .nav li .dropdown-menu .dropdown-item {
@@ -19552,7 +19552,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .dark-edition {
-  background-color: #1a2035;
+  background-color: #1e1e2f;
 }
 
 .dark-edition .btn,
@@ -20433,20 +20433,27 @@ Copyright (c) 2015 Daniel Eden
   -ms-transition: all 150ms ease-in, color, 0ms;
   transition: all 150ms ease-in, color, 0ms;
 }
+.jss12 {
+  top: 22px;
+  width: 35px;
+  border: 0;
+
+
+  vertical-align: middle;
+}
 
 .dark-edition .sidebar .sidebar-background:after,
 .dark-edition .sidebar {
-  background: #1f283e;
-  opacity: .94;
+
 }
 
 .dark-edition .sidebar[data-background-color="black"] .nav li:not(.active) a,
 .dark-edition .sidebar[data-background-color="black"] .nav li:not(.active) .dropdown-menu a {
-  color: #a9afbbd1;
+  color: white;
 }
 
 .dark-edition .sidebar[data-background-color="black"] .nav li:not(.active) i {
-  color: #a9afbbd1;
+  color: white;
 }
 
 .dark-edition .sidebar[data-background-color="black"] .nav li:not(.active):not(.active):hover>a,
@@ -20458,7 +20465,7 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .dark-edition .sidebar .logo .simple-text {
-  color: #a9afbbd1;
+  color: white;
   font-weight: 300;
 }
 
