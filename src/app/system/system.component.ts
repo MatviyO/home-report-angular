@@ -5,5 +5,8 @@ import {Component } from '@angular/core';
   templateUrl: './system.component.html'
 })
 export class SystemComponent  {
+  fa() {
+    console.log('gdfgdfg')
+  }
 
 }
