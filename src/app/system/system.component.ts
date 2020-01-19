@@ -9,4 +9,8 @@ export class SystemComponent  {
     console.log('gdfgdfg')
   }
 
+  ma() {
+    console.log('dfjdkdj ')
+  }
+
 }
