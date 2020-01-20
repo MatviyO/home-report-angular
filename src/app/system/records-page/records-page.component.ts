@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HeaderService} from '../header.service';
 
 @Component({
   selector: 'app-records-page',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecordsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: HeaderService) { }
 
   ngOnInit() {
+    this.titleService.setTitle('Records');
   }
-
 }

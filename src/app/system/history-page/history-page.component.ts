@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HeaderService} from '../header.service';
 
 @Component({
   selector: 'app-history-page',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: HeaderService) { }
 
   ngOnInit() {
+    this.titleService.setTitle('History');
   }
 
 }
