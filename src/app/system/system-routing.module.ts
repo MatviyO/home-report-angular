@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 import {SystemComponent} from './system.component';
-import {AccountPageComponent} from './bill-page/account-page.component';
+import {AccountPageComponent} from './account-page/account-page.component';
 import {HistoryPageComponent} from './history-page/history-page.component';
 import {PlaningPageComponent} from './planing-page/planing-page.component';
 import {RecordsPageComponent} from './records-page/records-page.component';
