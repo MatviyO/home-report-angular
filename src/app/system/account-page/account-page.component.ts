@@ -11,21 +11,32 @@ import {Subscription} from 'rxjs/Subscription';
   styleUrls: ['./account-page.component.scss']
 })
 export class AccountPageComponent implements OnInit, OnDestroy {
-  subscribtion: Subscription;
+  sub1: Subscription;
+  sub2: Subscription;
+  currency: any;
+  account: AccountModel;
+
   constructor(private titleService: HeaderService,
               private accountService: AccountService) {
   }
 
   ngOnInit() {
     this.titleService.setTitle('Account');
-    this.subscribtion = Observable.combineLatest(
+    this.sub1 = Observable.combineLatest(
       this.accountService.getAccount(),
       this.accountService.getCurrency()
     ).subscribe((data: [AccountModel, any]) => {
-      console.log(data);
+      this.account = data[0];
+      this.currency = data[1];
     })
   }
   ngOnDestroy() {
-    this.subscribtion.unsubscribe();
+    this.sub1.unsubscribe();
+    this.sub2.unsubscribe();
+  }
+  onRefresh() {
+   this.sub2 = this.accountService.getCurrency().subscribe((currency: any) => {
+      this.currency = currency;
+    })
   }
 }
