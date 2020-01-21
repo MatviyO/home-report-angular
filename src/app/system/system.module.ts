@@ -10,15 +10,18 @@ import {SystemComponent} from './system.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
 import { FooterComponent } from './layout/components/footer/footer.component';
-import {HeaderService} from './header.service';
+import {HeaderService} from './layout/services/header.service';
 import { NavbarHeaderComponent } from './layout/components/navbar-header/navbar-header.component';
 import {DropdownDirective} from './layout/directives/dropdown.directive';
+import { AccountCardComponent } from './account-page/account-card/account-card.component';
+import { CurrencyCardComponent } from './account-page/currency-card/currency-card.component';
+import {AccountService} from './layout/services/account.service';
 
 @NgModule({
   imports: [CommonModule, SharedModule, SystemRoutingModule],
   declarations: [SystemComponent, AccountPageComponent, HistoryPageComponent, PlaningPageComponent,
-    RecordsPageComponent, DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective],
-  providers: [HeaderService]
+    RecordsPageComponent, DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent],
+  providers: [HeaderService, AccountService]
 })
 export class SystemModule {
 

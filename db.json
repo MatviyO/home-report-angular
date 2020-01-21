@@ -7,7 +7,7 @@
       "name": "Admin"
     }
   ],
-  "bill": {
+  "account": {
     "value": 100000,
     "currency": "USD"
   },
