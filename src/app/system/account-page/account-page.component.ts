@@ -15,6 +15,7 @@ export class AccountPageComponent implements OnInit, OnDestroy {
   sub2: Subscription;
   currency: any;
   account: AccountModel;
+  isLoaded = false;
 
   constructor(private titleService: HeaderService,
               private accountService: AccountService) {
@@ -28,6 +29,7 @@ export class AccountPageComponent implements OnInit, OnDestroy {
     ).subscribe((data: [AccountModel, any]) => {
       this.account = data[0];
       this.currency = data[1];
+      this.isLoaded = true;
     })
   }
   ngOnDestroy() {
@@ -35,8 +37,10 @@ export class AccountPageComponent implements OnInit, OnDestroy {
     this.sub2.unsubscribe();
   }
   onRefresh() {
+    this.isLoaded = false;
    this.sub2 = this.accountService.getCurrency().subscribe((currency: any) => {
       this.currency = currency;
+      this.isLoaded = true;
     })
   }
 }
