@@ -16,6 +16,7 @@ export class SystemComponent implements OnInit {
   ngOnInit() {
     this.router.navigate(['/system', 'dashboard']);
     console.log('this')
+    console.log('sdhfsdf')
   }
 
 }
