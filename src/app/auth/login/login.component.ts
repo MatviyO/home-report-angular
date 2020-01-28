@@ -42,6 +42,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     const formData = this.form.value;
+    console.log(this.form)
+    console.log(formData)
     this.usersService.getUserByEmail(formData.email)
       .subscribe((user: User) => {
         if (user) {

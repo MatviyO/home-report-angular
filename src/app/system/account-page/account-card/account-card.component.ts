@@ -12,7 +12,7 @@ export class AccountCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    console.log(this.currency)
   }
 
 }

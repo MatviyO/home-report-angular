@@ -32,15 +32,18 @@ export class AccountPageComponent implements OnInit, OnDestroy {
       this.isLoaded = true;
     })
   }
-  ngOnDestroy() {
-    this.sub1.unsubscribe();
-    this.sub2.unsubscribe();
-  }
+
   onRefresh() {
     this.isLoaded = false;
-   this.sub2 = this.accountService.getCurrency().subscribe((currency: any) => {
+   this.sub2 = this.accountService.getCurrency()
+     .delay(2000)
+     .subscribe((currency: any) => {
       this.currency = currency;
       this.isLoaded = true;
     })
+  }
+  ngOnDestroy() {
+    // this.sub1.unsubscribe();
+    // this.sub2.unsubscribe();
   }
 }
