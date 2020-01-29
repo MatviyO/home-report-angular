@@ -8,8 +8,8 @@
     }
   ],
   "account": {
-    "value": 100000,
-    "currency": "USD"
+    "value": 1000,
+    "currency": "EUR"
   },
   "categories": [
     {

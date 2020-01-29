@@ -9,10 +9,14 @@ import {AccountModel} from '../../layout/models/account.model';
 export class AccountCardComponent implements OnInit {
   @Input() account: AccountModel;
   @Input() currency: any;
+  dolar: number;
+  rub: number;
   constructor() { }
 
   ngOnInit() {
-    console.log(this.currency)
+    const {rates} = this.currency;
+    this.dolar = rates['USD'] * this.account.value;
+    this.rub = rates['UAH'] * this.account.value;
   }
 
 }

@@ -29,7 +29,7 @@
           </td>
 
           <td class="text-primary">
-            {{account.value}}
+            {{dolar | number: '1.2'}}
           </td>
         </tr>
         <tr>
@@ -37,10 +37,10 @@
             2
           </td>
           <td>
-            RUB
+            UAH
           </td>
           <td class="text-primary">
-            $23,789
+           {{rub | number: '1.2'}}
           </td>
         </tr>
         <tr>
@@ -51,7 +51,7 @@
             EURO
           </td>
           <td class="text-primary">
-            $56,142
+            {{account.value| number: '1.2'}}
           </td>
         </tr>
         </tbody>

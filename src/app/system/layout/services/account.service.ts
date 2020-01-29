@@ -14,7 +14,7 @@ export class AccountService  {
     return this.http.get('http://localhost:3000/account')
       .map((res: Response) => res.json());
   }
-  getCurrency(base: string = 'RUB'): Observable<any> {
+  getCurrency(base: string = 'EUR'): Observable<any> {
     return this.http.get(`http://data.fixer.io/api/latest?access_key=${this.api_key}&base=${base}`)
       .map((res: Response) => res.json());
   }

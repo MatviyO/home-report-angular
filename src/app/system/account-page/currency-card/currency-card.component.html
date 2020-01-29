@@ -7,9 +7,7 @@
     <div class="table-responsive">
       <table class="table">
         <thead class=" text-primary">
-        <th>
-          ID
-        </th>
+
         <th>
           Currency
         </th>
@@ -23,50 +21,32 @@
         </thead>
         <tbody>
         <tr>
-          <td>
-            1
-          </td>
-          <td>
-            USA
-          </td>
-          <td>
-            20.01.2020
-          </td>
 
-          <td class="text-primary">
-            $24,35
-          </td>
-        </tr>
-        <tr>
-          <td>
-            2
-          </td>
-          <td>
-            RUB
-          </td>
-          <td>
-            20.01.2020
-          </td>
-
-          <td class="text-primary">
-            0,4
-          </td>
-        </tr>
-        <tr>
-          <td>
-            3
-          </td>
           <td>
             EURO
           </td>
           <td>
-            20.01.2020
+           {{currency.date | appMoment: 'YYYY-MM-DD'}}
           </td>
-
           <td class="text-primary">
             27.30
           </td>
         </tr>
+        <tr *ngFor="let c of curroncies">
+          <td>
+            {{c}}
+          </td>
+          <td >
+
+            {{currency.date | appMoment: 'YYYY-MM-DD'}}
+          </td>
+          <td class="text-primary">
+            {{ currency.rates[c] }}
+          </td>
+
+
+        </tr>
+
         </tbody>
       </table>
     </div>

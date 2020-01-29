@@ -16,11 +16,12 @@ import {DropdownDirective} from './layout/directives/dropdown.directive';
 import { AccountCardComponent } from './account-page/account-card/account-card.component';
 import { CurrencyCardComponent } from './account-page/currency-card/currency-card.component';
 import {AccountService} from './layout/services/account.service';
+import {MomentPipe} from './layout/pipes/moment.pipe';
 
 @NgModule({
   imports: [CommonModule, SharedModule, SystemRoutingModule],
   declarations: [SystemComponent, AccountPageComponent, HistoryPageComponent, PlaningPageComponent,
-    RecordsPageComponent, DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent],
+    RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe],
   providers: [HeaderService, AccountService]
 })
 export class SystemModule {
