@@ -17,11 +17,14 @@ import { AccountCardComponent } from './account-page/account-card/account-card.c
 import { CurrencyCardComponent } from './account-page/currency-card/currency-card.component';
 import {AccountService} from './layout/services/account.service';
 import {MomentPipe} from './layout/pipes/moment.pipe';
+import { AddEventComponent } from './records-page/add-event/add-event.component';
+import { AddCategoryComponent } from './records-page/add-category/add-category.component';
+import { EditCategoryComponent } from './records-page/edit-category/edit-category.component';
 
 @NgModule({
   imports: [CommonModule, SharedModule, SystemRoutingModule],
   declarations: [SystemComponent, AccountPageComponent, HistoryPageComponent, PlaningPageComponent,
-    RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe],
+    RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe, AddEventComponent, AddCategoryComponent, EditCategoryComponent],
   providers: [HeaderService, AccountService]
 })
 export class SystemModule {
