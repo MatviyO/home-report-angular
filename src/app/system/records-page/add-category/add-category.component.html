@@ -4,30 +4,25 @@
     <p class="card-category">new category</p>
   </div>
   <div class="card-body">
-    <form>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label class="bmd-label-floating">Fist Name</label>
-            <input type="text" class="form-control">
+            <label for="category-name" class="bmd-label-floating"> Name</label>
+            <input id="category-name" type="text" class="form-control" required
+                   #name="ngModel" name="name" ngModel>
+            <span class="form-help-text">Validation error</span>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label class="bmd-label-floating">Last Name</label>
-            <input type="text" class="form-control">
+            <label for="category-value" class="bmd-label-floating"> Limitted</label>
+            <input id="category-value" type="text" class="form-control" required>
+            <span class="form-help-text">Validation error</span>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <label class="bmd-label-floating">Adress</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+      <button type="submit" class="btn btn-primary pull-right">Add Category</button>
       <div class="clearfix"></div>
     </form>
   </div>
