@@ -12,5 +12,6 @@ export class RecordsPageComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle('Records');
+    console.log('fdjgjfd')
   }
 }
