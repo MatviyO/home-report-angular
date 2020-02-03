@@ -23,9 +23,10 @@
       "id": 2
     },
     {
-      "id": 3,
+
       "name": "Car",
-      "capacity": 7000
+      "capacity": 7000,
+      "id": 3
     }
   ],
   "events": [

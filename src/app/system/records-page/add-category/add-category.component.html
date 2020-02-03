@@ -6,19 +6,29 @@
   <div class="card-body">
     <form #form="ngForm" (ngSubmit)="onSubmit(form)">
       <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
+        <div class="col-md-12">
+          <div class="form-group"
+               [ngClass]="{'has-error': name.invalid && name.touched}">
             <label for="category-name" class="bmd-label-floating"> Name</label>
             <input id="category-name" type="text" class="form-control" required
                    #name="ngModel" name="name" ngModel>
-            <span class="form-help-text">Validation error</span>
+            <span
+              *ngIf="name.invalid && name.touched"
+              class="form-help-text">Name category no zero</span>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="form-group">
+        <div class="col-md-12">
+          <div class="form-group"
+               [ngClass]="{'has-error': capacity.invalid && capacity.touched}">
             <label for="category-value" class="bmd-label-floating"> Limitted</label>
-            <input id="category-value" type="text" class="form-control" required>
-            <span class="form-help-text">Validation error</span>
+            <input
+              [ngModel]="1"
+              name="capacity"
+              #capacity="ngModel" required
+              id="category-value" min="1"  type="number" class="form-control" required>
+            <span *ngIf="capacity.invalid && capacity.touched"
+              class="form-help-text"
+           >Dont zero</span>
           </div>
         </div>
       </div>

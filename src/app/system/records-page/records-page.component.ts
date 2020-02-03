@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HeaderService} from '../layout/services/header.service';
+import {CategoryModel} from '../layout/models/category.model';
 
 @Component({
   selector: 'app-records-page',
@@ -13,5 +14,7 @@ export class RecordsPageComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('Records');
     console.log('fdjgjfd')
+  }
+  newCategoryAdded(category: CategoryModel) {
   }
 }
