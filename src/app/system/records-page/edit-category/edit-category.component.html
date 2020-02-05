@@ -1,33 +1,46 @@
 <div class="card">
   <div class="card-header card-header-primary">
     <h4 class="card-title">Edit Category</h4>
-    <p class="card-category"> </p>
+    <p class="card-category"></p>
   </div>
   <div class="card-body">
-    <form>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label class="bmd-label-floating">Fist Name</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label class="bmd-label-floating">Last Name</label>
-            <input type="text" class="form-control">
-          </div>
-        </div>
-      </div>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
-            <label class="bmd-label-floating">Adress</label>
-            <input type="text" class="form-control">
+            <label for="select" class="bmd-label-floating"> Name</label>
+            <select id="select" class="form-control">
+              <option>1</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group"
+               [ngClass]="{'has-error': name.invalid && name.touched}">
+            <label for="category-name" class="bmd-label-floating"> Name</label>
+            <input id="category-name" type="text" class="form-control" required
+                   #name="ngModel" name="name" ngModel>
+            <span
+              *ngIf="name.invalid && name.touched"
+              class="form-help-text">Name category no zero</span>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="form-group"
+               [ngClass]="{'has-error': capacity.invalid && capacity.touched}">
+            <label for="category-value" class="bmd-label-floating"> Limitted</label>
+            <input
+              [ngModel]="1"
+              name="capacity"
+              #capacity="ngModel" required
+              id="category-value" min="1" type="number" class="form-control" required>
+            <span *ngIf="capacity.invalid && capacity.touched"
+                  class="form-help-text"
+            >Dont zero</span>
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+      <button type="submit" class="btn btn-primary pull-right">Add Category</button>
       <div class="clearfix"></div>
     </form>
   </div>
