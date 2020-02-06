@@ -8,8 +8,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
-            <label for="select" class="bmd-label-floating"> Name</label>
-            <select id="select" class="form-control">
+            <label for="e-select-category" class="bmd-label-floating"> Change category</label>
+            <select id="e-select-category" class="form-control">
               <option>1</option>
             </select>
           </div>
@@ -17,8 +17,8 @@
         <div class="col-md-12">
           <div class="form-group"
                [ngClass]="{'has-error': name.invalid && name.touched}">
-            <label for="category-name" class="bmd-label-floating"> Name</label>
-            <input id="category-name" type="text" class="form-control" required
+            <label for="e-category-name" class="bmd-label-floating"> Name</label>
+            <input id="e-category-name" type="text" class="form-control" required
                    #name="ngModel" name="name" ngModel>
             <span
               *ngIf="name.invalid && name.touched"
@@ -28,12 +28,12 @@
         <div class="col-md-12">
           <div class="form-group"
                [ngClass]="{'has-error': capacity.invalid && capacity.touched}">
-            <label for="category-value" class="bmd-label-floating"> Limitted</label>
+            <label for="e-category-value" class="bmd-label-floating"> Limitted</label>
             <input
               [ngModel]="1"
               name="capacity"
               #capacity="ngModel" required
-              id="category-value" min="1" type="number" class="form-control" required>
+              id="e-category-value" min="1" type="number" class="form-control" required>
             <span *ngIf="capacity.invalid && capacity.touched"
                   class="form-help-text"
             >Dont zero</span>
