@@ -10,7 +10,8 @@
           <div class="form-group">
             <label for="e-select-category" class="bmd-label-floating"> Change category</label>
             <select id="e-select-category" class="form-control">
-              <option>1</option>
+              <option *ngFor="let c of  categories"
+              [value]="c.id">{{c.name}}</option>
             </select>
           </div>
         </div>
@@ -40,7 +41,7 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary pull-right">Add Category</button>
+      <button type="submit" class="btn btn-primary pull-right">Edit Category</button>
       <div class="clearfix"></div>
     </form>
   </div>
