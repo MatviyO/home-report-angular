@@ -26,6 +26,21 @@
       "name": "Car",
       "capacity": 7000,
       "id": 3
+    },
+    {
+      "name": "New2ere",
+      "capacity": 1,
+      "id": 4
+    },
+    {
+      "name": "netcore",
+      "capacity": 1,
+      "id": 5
+    },
+    {
+      "name": "net",
+      "capacity": 1,
+      "id": 6
     }
   ],
   "events": [
