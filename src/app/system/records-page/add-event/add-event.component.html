@@ -24,8 +24,9 @@
             <label  class="bmd-label-floating"> Change type:</label>
             <div *ngFor="let tt of types">
               <label>
-                <input type="radio"  name="type" [value]="tt.type"  >{{tt.label}}</label>
+                <input type="radio"  name="type" [value]="tt.type" [ngModel]="'outcome'" >{{tt.label}}</label>
             </div>
+            Profit
           </div>
         </div>
         <div class="col-md-12">
@@ -49,7 +50,7 @@
             <input
               name="description"
               #description="ngModel" required
-              id="description" min="1" type="number" class="form-control" required
+              id="description"  type="text" class="form-control" required
               ngModel>
             <span *ngIf="description.invalid && description.touched"
                   class="form-help-text"
