@@ -18,5 +18,9 @@ export class AccountService  {
     return this.http.get(`http://data.fixer.io/api/latest?access_key=${this.api_key}&base=${base}`)
       .map((res: Response) => res.json());
   }
+  updateAccount(account: AccountModel): Observable<AccountModel> {
+    return this.http.put('http://localhost:3000/account', account)
+      .map((res: Response) => res.json());
+  }
 
 }

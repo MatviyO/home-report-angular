@@ -4,6 +4,10 @@
     <p class="card-category">new event</p>
   </div>
   <div class="card-body">
+    <div
+      *ngIf="message.text"
+      class="alert alert-denger alert-{{message.type}}"> <span>
+                      {{message.text}}</span></div>
     <form #form="ngForm" (ngSubmit)="onSubmit(form)">
       <div class="row">
         <div class="col-md-12">
