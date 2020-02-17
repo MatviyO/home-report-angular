@@ -22,9 +22,10 @@ import { AddCategoryComponent } from './records-page/add-category/add-category.c
 import { EditCategoryComponent } from './records-page/edit-category/edit-category.component';
 import {CategoriesService} from './layout/services/categories.service';
 import {EventsService} from './layout/services/events.service';
+import {ChartsModule} from 'ng4-charts';
 
 @NgModule({
-  imports: [CommonModule, SharedModule, SystemRoutingModule],
+    imports: [CommonModule, SharedModule, SystemRoutingModule, ChartsModule ],
   declarations: [SystemComponent, AccountPageComponent, HistoryPageComponent, PlaningPageComponent,
     RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe, AddEventComponent, AddCategoryComponent, EditCategoryComponent],
   providers: [HeaderService, AccountService, CategoriesService, EventsService]

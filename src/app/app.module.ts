@@ -7,13 +7,14 @@ import {UsersService} from './shared/services/users.service';
 import {HttpModule} from '@angular/http';
 import {AuthService} from './shared/services/auth.service';
 import {SystemModule} from './system/system.module';
-
+import { ChartsModule } from 'ng4-charts/ng4-charts';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
+ ChartsModule,
     HttpModule,
     AuthModule,
     AppRoutingModule,

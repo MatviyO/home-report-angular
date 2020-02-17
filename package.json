@@ -22,9 +22,11 @@
     "@angular/platform-browser": "^4.2.5",
     "@angular/platform-browser-dynamic": "^4.2.5",
     "@angular/router": "^4.2.5",
+    "chart.js": "^2.9.3",
     "core-js": "^2.4.1",
     "lite-server": "^2.5.4",
     "moment": "^2.24.0",
+    "ng4-charts": "^1.0.2",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.12"
   },
