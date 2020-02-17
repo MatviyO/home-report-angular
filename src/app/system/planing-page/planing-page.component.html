@@ -1,66 +1,39 @@
-<!--<div class="title-block">-->
-<!--  <h3 class="title">-->
-<!--    Page planing <span class="sparkline bar"></span>-->
-<!--  </h3>-->
-<!--</div>-->
-
-<!--<section class="section">-->
-<!--  <div class="row">-->
-<!--    <div class="col-md-12">-->
-
-<!--      <div class="card">-->
-<!--        <div class="card-header card-header-sm bordered">-->
-<!--          <div class="header-block">-->
-<!--            <h3 class="title">Rasxody</h3>-->
-<!--          </div>-->
-<!--          <h5 class="planing-expenses pull-right">-->
-<!--            Obshey ostatok: <span class="text-success">78 9999</span>-->
-<!--          </h5>-->
-<!--        </div>-->
-
-<!--        <div class="card-block">-->
-<!--          <div class="row">-->
-<!--            <div class="col-sx-6">-->
-<!--              <div class="n-progress">-->
-<!--                <div class="progress-bar success">-->
-<!--                  <span>Name Category</span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-
-<!--            <div class="col-xs-6">-->
-<!--              <p>-->
-<!--                <span class="text-warning">600,000</span>-->
-<!--                with-->
-<!--                <span class="text-primary">1000.00</span>-->
-<!--                |-->
-<!--                ostalos<span class="text-success">400.00</span>(rub)-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--        <div class="row">-->
-<!--          <div class="col-xs-6">-->
-<!--            <div class="n-progress">-->
-<!--              <div class="progress-bar danger">-->
-<!--                <span>Name Category</span>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-xs-6">-->
-<!--            <p>-->
-<!--              <span class="text-warning">1600,000</span>-->
-<!--              with-->
-<!--              <span class="text-primary">1000.00</span>-->
-<!--              |-->
-<!--              ostalos<span class="text-success">-200.00</span>(rub)-->
-<!--            </p>-->
-<!--          </div>-->
-<!--        </div>-->
-
-<!--      </div>-->
-
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+<div class="container-fluid">
+  <div class="card" *ngIf="!isLoading"> Loading.....</div>
+  <div *ngIf="isLoading" class="card">
+    <div class="card-header card-header-tabs card-header-warning">
+      <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper">
+          <span class="nav-tabs-title">Cost:</span>
+          <ul class="nav ">
+            <li class="nav-item">
+              <a class="nav-link active">
+                <i class="material-icons">bug_report</i> Total
+                balance: {{account.value | number: '1.2'}} {{account.currency}}
+                <div class="ripple-container"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row" *ngFor="let c of categories">
+        <div class="col-md-6">
+          <div class="n-progress" style="background-color: white;">
+            <div class="progress-bar  {{getCatColorClass(c)}}" [ngStyle]="{width: getCatPercent(c)}">
+              {{c.name}}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p>
+            <span class="text-{{getCatColorClass(c)}}">{{getCategoryCost(c)| number: '1.2'}}</span>
+            with<span class="text-{{getCatColorClass(c)}}">{{c.capacity| number: '1.2'}}</span>
+            | total: <span class="text-{{getCatColorClass(c)}}">{{c.capacity - getCategoryCost(c) | number: '1.2'}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

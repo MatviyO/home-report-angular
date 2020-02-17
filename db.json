@@ -8,39 +8,24 @@
     }
   ],
   "account": {
-    "value": 2000,
+    "value": 20000,
     "currency": "EUR"
   },
   "categories": [
     {
       "name": "Home",
-      "capacity": 15000,
+      "capacity": 5000,
       "id": 1
     },
     {
       "name": "Eat",
-      "capacity": 10000,
+      "capacity": 6000,
       "id": 2
     },
     {
       "name": "Car",
-      "capacity": 7000,
+      "capacity": 4000,
       "id": 3
-    },
-    {
-      "name": "New2ere",
-      "capacity": 1,
-      "id": 4
-    },
-    {
-      "name": "netcore",
-      "capacity": 1,
-      "id": 5
-    },
-    {
-      "name": "net",
-      "capacity": 1,
-      "id": 6
     }
   ],
   "events": [
@@ -61,12 +46,44 @@
       "description": "SHina"
     },
     {
+      "id": 3,
+      "type": "outcome",
+      "amount": 1200,
+      "category": 3,
+      "date": "10.01.2020",
+      "description": "maslo"
+    },
+    {
       "type": "income",
       "amount": 1000,
-      "category": 1,
+      "category": 3,
       "date": "17.02.02020 10:26:12",
       "description": "bonus",
-      "id": 3
+      "id": 4
+    },
+    {
+      "id": 5,
+      "type": "outcome",
+      "amount": 699,
+      "category": 3,
+      "date": "10.01.2020",
+      "description": "maslo"
+    },
+    {
+      "id": 6,
+      "type": "outcome",
+      "amount": 699,
+      "category": 2,
+      "date": "10.01.2020",
+      "description": "metro"
+    },
+    {
+      "id": 7,
+      "type": "outcome",
+      "amount": 2000,
+      "category": 3,
+      "date": "10.01.2020",
+      "description": "tonyvanna"
     }
   ]
 }
