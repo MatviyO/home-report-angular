@@ -23,11 +23,15 @@ import { EditCategoryComponent } from './records-page/edit-category/edit-categor
 import {CategoriesService} from './layout/services/categories.service';
 import {EventsService} from './layout/services/events.service';
 import {ChartsModule} from 'ng4-charts';
+import { HistoryChartComponent } from './history-page/history-chart/history-chart.component';
+import { HistoryEventsComponent } from './history-page/history-events/history-events.component';
+import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
+import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
 
 @NgModule({
     imports: [CommonModule, SharedModule, SystemRoutingModule, ChartsModule ],
   declarations: [SystemComponent, AccountPageComponent, HistoryPageComponent, PlaningPageComponent,
-    RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe, AddEventComponent, AddCategoryComponent, EditCategoryComponent],
+    RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe, AddEventComponent, AddCategoryComponent, EditCategoryComponent, HistoryChartComponent, HistoryEventsComponent, HistoryDetailComponent, HistoryFilterComponent],
   providers: [HeaderService, AccountService, CategoriesService, EventsService]
 })
 export class SystemModule {

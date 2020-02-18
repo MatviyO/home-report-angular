@@ -1,8 +1,11 @@
-<div style="display: block">
-<canvas baseChart
-        [data]="pieChartData"
-        [labels]="pieChartLabels"
-        [chartType]="pieChartType"
-        (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)"></canvas>
+<div class="row">
+  <div class="col-md-12">
+    <app-history-chart></app-history-chart>
+  </div>
 </div>
+<div class="row">
+  <div class="container-fluid">
+    <app-history-events></app-history-events>
+  </div>
+</div>
+<app-history-filter></app-history-filter>
