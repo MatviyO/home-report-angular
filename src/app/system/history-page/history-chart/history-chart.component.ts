@@ -1,27 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
+import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-history-chart',
   templateUrl: './history-chart.component.html',
   styleUrls: ['./history-chart.component.scss']
 })
-export class HistoryChartComponent implements OnInit {
-
-  // Pie
-  public pieChartLabels = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-  public pieChartData = [300, 500, 100];
-  public pieChartType = 'pie';
-  constructor() { }
-
-  ngOnInit() {
-  }
-  // events
-  public chartClicked(e: any ): void {
-    console.log(e);
-  }
-
-  public chartHovered(e: any ): void {
-    console.log(e);
-  }
-
+export class HistoryChartComponent  {
+  @Input() data;
+  colorScheme = {
+    domain: ['rgb(168, 56, 93)', 'rgb(122, 163, 229)', 'rgb(170, 227, 245)', 'rgb(173, 205, 237)']
+  };
 }

@@ -27,9 +27,10 @@ import { HistoryChartComponent } from './history-page/history-chart/history-char
 import { HistoryEventsComponent } from './history-page/history-events/history-events.component';
 import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
 import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
+import {NgxChartsModule} from '@swimlane/ngx-charts';
 
 @NgModule({
-    imports: [CommonModule, SharedModule, SystemRoutingModule, ChartsModule ],
+    imports: [CommonModule, SharedModule, SystemRoutingModule, ChartsModule, NgxChartsModule ],
   declarations: [SystemComponent, AccountPageComponent, HistoryPageComponent, PlaningPageComponent,
     RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe, AddEventComponent, AddCategoryComponent, EditCategoryComponent, HistoryChartComponent, HistoryEventsComponent, HistoryDetailComponent, HistoryFilterComponent],
   providers: [HeaderService, AccountService, CategoriesService, EventsService]
