@@ -34,44 +34,46 @@
               <table class="table">
                 <thead class=" text-primary">
                 <th>
-                  ID
+                  #
                 </th>
                 <th>
-                  Currency
+                  Sum
                 </th>
                 <th>
-                  Salary
+                  Date
+                </th>
+                <th>
+                  Category
+                </th>
+                <th>
+                  Type
+                </th>
+                <th>
+                  Action
                 </th>
                 </thead>
                 <tbody>
-                <tr>
+                <tr *ngFor="let c of events; let indx = index">
                   <td>
-                    1
+                    {{indx + 1}}
                   </td>
                   <td>
-                    USA
+                   {{ c.amount | number: '1.2' }}
                   </td>
                   <td class="text-primary">
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    2
-                  </td>
-                  <td>
-                    UAH
+                   {{ c.date }}
                   </td>
                   <td class="text-primary">
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    3
-                  </td>
-                  <td>
-                    EURO
+                    <span [ngClass]="getEventClass(c)">
+                   <span *ngIf="c.type === 'income'">Profit</span>
+                    <span *ngIf="c.type === 'outcome'">Cost</span>
+                    </span>
                   </td>
                   <td class="text-primary">
+                    Cost
+                  </td>
+                  <td class="text-primary">
+                      <a>Open</a>
                   </td>
                 </tr>
                 </tbody>
