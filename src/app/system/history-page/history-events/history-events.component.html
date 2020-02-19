@@ -58,22 +58,22 @@
                     {{indx + 1}}
                   </td>
                   <td>
-                   {{ c.amount | number: '1.2' }}
+                    {{ c.amount | number: '1.2' }}
                   </td>
                   <td class="text-primary">
-                   {{ c.date }}
+                    {{ c.date | appMoment: 'DD.MM.YYYY HH:mm:ss' }}
+                  </td>
+                  <td class="text-primary">
+                    {{ c.catName }}
                   </td>
                   <td class="text-primary">
                     <span [ngClass]="getEventClass(c)">
-                   <span *ngIf="c.type === 'income'">Profit</span>
-                    <span *ngIf="c.type === 'outcome'">Cost</span>
+                        <span *ngIf="c.type === 'income'">Profit</span>
+                        <span *ngIf="c.type === 'outcome'">Cost</span>
                     </span>
                   </td>
                   <td class="text-primary">
-                    Cost
-                  </td>
-                  <td class="text-primary">
-                      <a>Open</a>
+                    <a [routerLink]="['/system/history', c.id]" class="btn btn-outline-primary">Open</a>
                   </td>
                 </tr>
                 </tbody>
