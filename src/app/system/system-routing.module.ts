@@ -6,6 +6,7 @@ import {HistoryPageComponent} from './history-page/history-page.component';
 import {PlaningPageComponent} from './planing-page/planing-page.component';
 import {RecordsPageComponent} from './records-page/records-page.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import {HistoryDetailComponent} from './history-page/history-detail/history-detail.component';
 
 const routes: Routes = [
   {path: 'system', component: SystemComponent, children: [
@@ -13,7 +14,8 @@ const routes: Routes = [
       {path: 'account', component: AccountPageComponent },
       {path: 'history', component: HistoryPageComponent },
       {path: 'planing', component: PlaningPageComponent },
-      {path: 'records', component: RecordsPageComponent }
+      {path: 'records', component: RecordsPageComponent },
+      {path: 'history/:id', component: HistoryDetailComponent },
     ]}
 ];
 @NgModule({

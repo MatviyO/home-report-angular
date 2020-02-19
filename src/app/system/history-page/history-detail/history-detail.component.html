@@ -1,3 +1,37 @@
-<p>
-  history-detail works!
-</p>
+<div class="container-fluid">
+  <div *ngIf="!isLoaded">Loading .......</div>
+  <div  class="card" *ngIf="isLoaded">
+    <div class="card-header card-header-tabs card-header-warning">
+      <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper">
+          <span class="nav-tabs-title"></span>
+          <ul class="nav ">
+            <li class="nav-item">
+              <a class="spn" [routerLink]="['/system/history']" >
+                <i class="material-icons">keyboard_backspace</i> Back</a>
+              <a class="nav-link active">
+                <i class="material-icons">bug_report</i> Page № {{event.id}}
+                <div class="ripple-container"></div>
+              </a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row" >
+        <div class="col-md-12">
+          <span class="title spn" *ngIf="event.type === 'income'">Profit</span>
+          <span class="title spn" *ngIf="event.type === 'outcome'">Cost</span>
+          <ul class="spn1">
+            <li>Sum: <strong>{{event.amount | number: '1.2'}}</strong></li>
+            <li>Category: <strong>{{category.name}}</strong></li>
+            <li>Comment: <strong>{{event.description}}</strong></li>
+            <li>Date: <strong>{{event.date}}</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
