@@ -28,11 +28,12 @@ import { HistoryEventsComponent } from './history-page/history-events/history-ev
 import { HistoryDetailComponent } from './history-page/history-detail/history-detail.component';
 import { HistoryFilterComponent } from './history-page/history-filter/history-filter.component';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {FilterPipe} from './layout/pipes/filter.pipe';
 
 @NgModule({
     imports: [CommonModule, SharedModule, SystemRoutingModule, ChartsModule, NgxChartsModule ],
   declarations: [SystemComponent, AccountPageComponent, HistoryPageComponent, PlaningPageComponent,
-    RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe, AddEventComponent, AddCategoryComponent, EditCategoryComponent, HistoryChartComponent, HistoryEventsComponent, HistoryDetailComponent, HistoryFilterComponent],
+    RecordsPageComponent,  DashboardComponent, SidebarComponent, FooterComponent, NavbarHeaderComponent, DropdownDirective, AccountCardComponent, CurrencyCardComponent, MomentPipe, AddEventComponent, AddCategoryComponent, EditCategoryComponent, HistoryChartComponent, HistoryEventsComponent, HistoryDetailComponent, HistoryFilterComponent, FilterPipe],
   providers: [HeaderService, AccountService, CategoriesService, EventsService]
 })
 export class SystemModule {
