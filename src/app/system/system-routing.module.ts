@@ -9,15 +9,17 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {HistoryDetailComponent} from './history-page/history-detail/history-detail.component';
 
 const routes: Routes = [
-  {path: 'system', component: SystemComponent, children: [
+  {path: '', component: SystemComponent, children: [
       {path: 'dashboard', component: DashboardComponent },
       {path: 'account', component: AccountPageComponent },
       {path: 'history', component: HistoryPageComponent },
       {path: 'planing', component: PlaningPageComponent },
       {path: 'records', component: RecordsPageComponent },
       {path: 'history/:id', component: HistoryDetailComponent },
-    ]}
+    ]
+  }
 ];
+
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]

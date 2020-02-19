@@ -6,7 +6,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {UsersService} from './shared/services/users.service';
 import {HttpModule} from '@angular/http';
 import {AuthService} from './shared/services/auth.service';
-import {SystemModule} from './system/system.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpModule,
     AuthModule,
     AppRoutingModule,
-    SystemModule,
     BrowserAnimationsModule
   ],
   providers: [UsersService, AuthService],

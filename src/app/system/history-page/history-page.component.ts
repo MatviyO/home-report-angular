@@ -17,6 +17,7 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
   events: EventModel[] = [];
   isLoaded = false;
   chartData = [];
+
   constructor(private titleService: HeaderService,
               private categoriesService: CategoriesService,
               private eventService: EventsService) { }
@@ -47,6 +48,7 @@ export class HistoryPageComponent implements OnInit, OnDestroy {
 
     })
   }
+
   ngOnDestroy() {
     if (this.sub1) {this.sub1.unsubscribe() }
   }
