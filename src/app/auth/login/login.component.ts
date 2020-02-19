@@ -25,6 +25,9 @@ export class LoginComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       if (params['nowCanLogin']) {
         this.showMessage({text: 'You can login in system', type: 'success'})
+      } else if (params['accessDenied']) {
+        this.showMessage({text: 'You no authorization', type: 'warning'})
+
       }
     })
     this.form = new FormGroup({
@@ -49,7 +52,6 @@ export class LoginComponent implements OnInit {
         if (user) {
           if (user.password === formData.password) {
             this.message.text = '';
-            console.log('yes')
             window.localStorage.setItem('user', JSON.stringify(user));
               this.authService.login();
              this.router.navigate(['/system', 'dashboard']);
