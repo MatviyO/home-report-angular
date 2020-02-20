@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="card" *ngIf="!isLoading"> Loading.....</div>
+  <div class="card" *ngIf="!isLoading"> <app-loader></app-loader></div>
   <div *ngIf="isLoading" class="card">
     <div class="card-header card-header-tabs card-header-warning">
       <div class="nav-tabs-navigation">

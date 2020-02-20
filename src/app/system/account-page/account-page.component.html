@@ -12,8 +12,8 @@
       </p>
     </div>
     <div class="card-body">
-      <div class="row text-center" *ngIf="!isLoaded">
-        Loading...</div>
+      <div style="position: center" class="row text-center" *ngIf="!isLoaded">
+        <app-loader></app-loader></div>
       <div class="row" *ngIf="isLoaded">
         <div class="col-md-6">
          <app-account-card [account]="account" [currency]="currency"></app-account-card>
