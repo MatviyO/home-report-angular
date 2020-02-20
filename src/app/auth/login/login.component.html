@@ -1,6 +1,6 @@
 
   <p class="text-xs-center"> Login in to work!</p>
-  <div style="color:red;"
+  <div @fade style="color:red;"
     *ngIf="message.text"
     class="alert alert-{{message.type}} ">{{message.text}}</div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
