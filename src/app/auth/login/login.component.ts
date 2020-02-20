@@ -6,6 +6,7 @@ import {Message} from '../../shared/models/message';
 import {AuthService} from '../../shared/services/auth.service';
 import {ActivatedRoute, Params, Router} from '@angular/router';
 import {fadeStateTrigger} from '../../shared/animations/fade.animation';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,15 @@ export class LoginComponent implements OnInit {
   constructor(private usersService: UsersService,
               private authService: AuthService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private title: Title,
+              private meta: Meta) {
+    title.setTitle('Login');
+    meta.addTags([
+      {name: 'keywords', content: 'login, input,system'},
+      {name: 'description', content: 'page login in system'}
+    ])
+  }
 
   ngOnInit() {
     this.message = new Message('danger', '');

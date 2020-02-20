@@ -5,12 +5,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
+    "build-prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server": "json-server --watch db.json --port 3000",
-    "dev": "concurrently --kill-others \"npm start  \"  &&  \" npm server \" "
+    "dev": "concurrently --kill-others \"npm start\" && \"npm server\" "
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,8 @@
     "chart.js": "^2.9.3",
     "core-js": "^2.4.1",
     "d3": "4.9.1",
+    "firebase-admin": "^8.9.2",
+    "http-server": "^0.12.1",
     "install": "^0.13.0",
     "lite-server": "^2.5.4",
     "moment": "^2.24.0",

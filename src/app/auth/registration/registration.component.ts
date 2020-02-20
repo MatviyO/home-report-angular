@@ -5,6 +5,7 @@ import {UsersService} from '../../shared/services/users.service';
 import {User} from '../../shared/models/user.model';
 import { Router} from '@angular/router';
 import {AuthService} from '../../shared/services/auth.service';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-registration',
@@ -16,7 +17,10 @@ export class RegistrationComponent implements OnInit {
   form: FormGroup
   constructor(private usersService: UsersService,
               authService:  AuthService,
-              private router: Router) { }
+              private router: Router,
+              private title: Title) {
+    title.setTitle('registration')
+  }
 
   ngOnInit() {
     this.message = new Message('danger', '');
