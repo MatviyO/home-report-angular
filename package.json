@@ -25,7 +25,7 @@
     "@angular/platform-browser-dynamic": "^4.2.5",
     "@angular/router": "^4.2.5",
     "@swimlane/ngx-charts": "5.3.1",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "core-js": "^2.4.1",
     "d3": "4.9.1",
     "firebase-admin": "^8.9.2",
